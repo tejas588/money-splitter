@@ -1,0 +1,148 @@
+/* Homepage.css */
+
+/* --- GLOBAL STYLES (Unchanged) --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- HOMEPAGE CONTAINER (Unchanged) --- */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+/* --- TITLE STYLING (Minor adjustment for smaller screens) --- */
+.homepage-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+}
+
+.typed {
+  color: #059669;
+}
+
+/* --- INPUT SECTION (Minor adjustments for better mobile fit) --- */
+.input-section {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%; /* Ensures it fills the width on mobile before max-width takes effect */
+  box-sizing: border-box; /* Include padding/border in element's total width */
+}
+
+/* --- INPUT FIELD STYLING (Unchanged) --- */
+.input-label {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #4b5563;
+  align-self: flex-start;
+}
+
+.friends-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1.1em;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -moz-appearance: textfield;
+}
+
+.friends-input::-webkit-outer-spin-button,
+.friends-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.friends-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+/* --- BUTTON STYLING (Unchanged) --- */
+.next-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #059669;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  letter-spacing: 0.5px;
+}
+
+.next-button:hover {
+  background-color: #047857;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+}
+
+.next-button:active {
+  transform: translateY(1px);
+}
+
+/* ==================================== */
+/* ## MOBILE OPTIMIZATIONS (Media Queries) */
+/* ==================================== */
+
+@media (max-width: 600px) {
+  /* Reduce font size for the main title on smaller screens */
+  .homepage-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  /* Make the input section less like a floating card and more integrated */
+  .input-section {
+    padding: 20px 20px; /* Reduced padding */
+    border-radius: 0; /* Optional: remove rounded corners for a full-screen feel */
+    box-shadow: none; /* Remove shadow to blend into the background */
+    max-width: 100%; /* Allow it to span the full width */
+  }
+
+  /* Reduce input and button size slightly to fit mobile screen */
+  .input-label {
+    font-size: 1em;
+  }
+  
+  .friends-input {
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .next-button {
+    font-size: 1.1em;
+    padding: 12px;
+  }
+  
+  /* Ensure the homepage container doesn't take up 100vh if content is short, 
+     but still centers content if there's less space */
+  .homepage {
+    min-height: auto; 
+    padding: 10px;
+    margin-top: 50px; /* Push content down slightly from the very top edge */
+  }
+}
