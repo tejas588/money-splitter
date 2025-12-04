@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/money-splitter/static/css/main.e4ecda96.css",
+    "main.js": "/money-splitter/static/js/main.8cca28b8.js",
+    "index.html": "/money-splitter/index.html",
+    "main.e4ecda96.css.map": "/money-splitter/static/css/main.e4ecda96.css.map",
+    "main.8cca28b8.js.map": "/money-splitter/static/js/main.8cca28b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4ecda96.css",
+    "static/js/main.8cca28b8.js"
+  ]
+}
